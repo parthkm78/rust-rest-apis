@@ -1,15 +1,32 @@
+# Rust REST API with MSSQL
+# 
+# A simple REST API built with Actix-web and Tiberius for MSSQL connectivity.
+# This project demonstrates basic CRUD operations with proper error handling,
+# logging, and database integration.
+
 [package]
 name = "rust-rest-apis"
 version = "0.1.0"
 edition = "2021"
 
 [dependencies]
-actix-web = "4"
-serde = { version = "1.0", features = ["derive"] }
-serde_json = "1.0"
-tiberius = "0.12"
-tokio = { version = "1", features = ["rt-multi-thread", "macros"] }
-tokio-util = { version = "0.7", features = ["compat"] }
-dotenvy = "0.15"
-env_logger = "0.10"
-log = "0.4"
+# Web Framework
+actix-web = "4"                                                    # Fast, powerful web framework for Rust
+
+# Serialization 
+serde = { version = "1.0", features = ["derive"] }               # Serialization framework with derive macros
+serde_json = "1.0"                                               # JSON support for serde
+
+# Database
+tiberius = "0.12"                                                # Pure Rust MSSQL/Azure SQL driver
+
+# Async Runtime
+tokio = { version = "1", features = ["rt-multi-thread", "macros"] } # Async runtime with multi-threading support
+tokio-util = { version = "0.7", features = ["compat"] }          # Compatibility utilities for tokio
+
+# Configuration
+dotenvy = "0.15"                                                 # Environment variable loading from .env files
+
+# Logging
+env_logger = "0.10"                                              # Environment-configurable logger implementation
+log = "0.4"                                                      # Logging facade for Rust
